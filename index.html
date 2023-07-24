@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base target="_top">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Greenvfo</title>
+	
+	<!-- LEAFLET JS LIBRARY -->
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+
+	<!-- BOOTSTRAP -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- SIDEBAR -->
+	<section class="sidebar">
+		<div class="icons">
+			<div class="icon">
+				<img src="src/icons/name=Home, type=outlined, color=grey.svg" alt="Home"/><p>Home</p>
+			</div>
+
+			<div class="icon"><a href="">
+				<img src="src/icons/name=Bookmark, type=outlined, color=grey.svg" alt="Saved"/><p>Profile</p>
+			</a></div>
+
+			<div class="icon">
+				<img src="src/icons/name=Add circle, type=outlined, color=grey.svg" alt="Add"/><p>Add</p>
+			</div>
+
+			<div class="icon"><a href="">
+				<img src="src/icons/name=Eco, type=outlined, color=grey.svg" alt="Species"/><p>Profile</p>
+			</a></div>
+			
+			<div class="icon"><a href="/pages/add/index.html">
+				<img src="src/icons/name=Person, type=outlined, color=grey.svg" alt="Profile"/><p>Profile</p>
+			</a></div>
+		</div>
+		
+	</section>
+
+	<!-- CONTAINER -->
+	<section class="container">
+		<!-- <h1>Hello World</h1> -->
+		<!-- MAPS -->
+		<div id="map" style="width: 100%; height: 100%;"></div>
+	</section>
+
+	<!-- INFO -->
+	<section class="info">
+		<div class="img-herbarium">
+			<img src="src/img/herbarium/Gymnacranthera Ocellata R.T.A Schouten.png" alt="Add"/>
+			<h1>Gymnacranthera Ocellata R.T.A Schouten</h1>
+			<p class="info-subtitle">Tree | Endemic to Borneo (Sabah, Sarawak, Brunei, and Kalimantan)</p>
+			<div class="type-herbarium">
+				<button class="info-btn-outlined" type="button">Save</button>
+				<button class="info-btn-enable" type="button">Description</button>
+				<button class="info-btn-outlined" type="button">Ecology</button>
+				<button class="info-btn-outlined" type="button">Benefit</button>
+				<button class="info-btn-outlined" type="button">Collector</button>
+			</div>
+			<br>
+			<p>In primary well-drained forest on low hills and ridges, usually in lowland Dipterocarp forest, but also from kerangas kerangas forest, on tuff, sandy and sandy loam soils, up to 1300 m altitude. Flowering mainly in June-November; fruiting in July-December</p>
+			<br>
+			<p class="info-last-update">Last update: 19 July 2023</p>
+		</div>
+	</section>
+
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
