@@ -12,9 +12,6 @@ html, body {
 }
 
 .sidebar {
-    /* border: 1px solid grey; */
-    /* flex: 0 100px; */
-    /* width: 200px; */
     width: 8em;
     height: 100%;
     background-color: white;
@@ -42,11 +39,23 @@ html, body {
 .icon {
     width: 100%;
     /* list-style-type: none; */
-    /* background-color: red; */
+    background-color: white;
     /* margin: 8px 0 8px 0; */
     text-align: center;
     color: #808080;
     padding: 16px 0 0 0;
+    border: none;
+}
+
+.icon:hover, img:hover {
+    border-radius: 8px;
+    background-color: #C6D5A7;
+    fill: white;
+    color: #8EAC50;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
 
 .icon img{
@@ -101,7 +110,7 @@ a, a:visited, a:active {
 }
 
 .info-btn-outlined {
-    /* background-color: #8EAC50; */
+    background-color: white;
     border-radius: 8px;
     border: 2px solid #8EAC50;
     color: #8EAC50;
