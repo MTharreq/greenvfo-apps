@@ -6,127 +6,17 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    display: flex;
-    flex-direction: row;
-    /* background-color: green; */
-}
-
-.sidebar {
-    width: 8em;
-    height: 100%;
-    background-color: white;
-    box-shadow: 2px 2px;
-    font-size: 0.7em;
-}
-
-.container {
-    background-color: lightgray;
-    padding: 0;
-}
-
-.icons {
-    /* background-color: yellow; */
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: flex-start;
-    /* height: 80vh; */
-    height: 100%;
-    flex-direction: column;
-}
-
-.icon {
-    width: 100%;
-    /* list-style-type: none; */
-    background-color: white;
-    /* margin: 8px 0 8px 0; */
-    text-align: center;
-    color: #808080;
-    padding: 16px 0 0 0;
-    border: none;
-}
-
-.icon:hover, img:hover {
-    border-radius: 8px;
-    background-color: #C6D5A7;
-    fill: white;
-    color: #8EAC50;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-}
-
-.icon img{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.leaflet-container {
-    /* height: 100%; */
-    /* height: 400px; */
-    width: 100%;
-    /* width: 1920px; */
-    /* max-width: 100%;  */
-    /* max-height: 100%; */
-}
-
-.info {
-    /* flex: 5; */
-    padding: 16px;
-    width: 40%;
-    /* background-color: blue; */
-    border: 1px solid grey;
-
-}
-
-.info-subtitle {
-    color: #4D4D4D;
-}
-
-.info-last-update {
-    color: #808080;
-}
-
-.info img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* #map { */
-    /* margin: 0; */
-    /* padding: 0; */
-    /* background-color: blue; */
-    /* height: 100%; */
-    /* width: 100%; */
-/* } */
-
+/* A */
 a, a:visited, a:active {
     text-decoration: none;
     color: #808080;
 }
 
-.info-btn-outlined {
-    background-color: white;
-    border-radius: 8px;
-    border: 2px solid #8EAC50;
-    color: #8EAC50;
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 500;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-}
-
-.info-btn-enable {
+/* B */
+.btn-enable {
     background-color: #8EAC50;
     border-radius: 8px;
     border: 2px solid #8EAC50;
@@ -137,8 +27,160 @@ a, a:visited, a:active {
     display: inline-block;
     font-size: 12px;
     font-weight: 500;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
 }
+
+.btn-outlined {
+    background-color: white;
+    border-radius: 8px;
+    border: 2px solid #8EAC50;
+    color: #8EAC50;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* C */
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: lightgray;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+/* E */
+/* F */
+/* G */
+/* H */
+/* I */
+.icon {
+    height: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    color: #808080;
+    cursor: pointer;
+    padding: 16px;
+    gap: 4px;
+}
+
+.icon:hover {
+    border-radius: 8px;
+    background-color: #E8EEDC;
+    color: #8EAC50;
+    padding: 0 16px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    /* text-align: center; */
+    justify-content: center;
+    /* height: 100%; */
+    gap: 1px;
+}
+
+.infobar {
+    background-color: white;
+    padding: 0 24px;
+    box-shadow: 2px 2px #e2e2e2;
+    width: 35%;
+    
+}
+
+.info img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.info-box h3{
+    margin: 16px 0 0 0;
+}
+
+
+.info-subtitle {
+    color: #4D4D4D;
+}
+
+.info-last-update {
+    color: #808080;
+}
+
+/* J */
+/* K */
+/* L */
+.leaflet-container {
+    /* height: 100%; */
+    /* height: 400px; */
+    width: 100%;
+    /* width: 1920px; */
+    /* max-width: 100%;  */
+    /* max-height: 100%; */
+}
+
+.logo {
+    padding-top: 10px;
+    /* width: 500px; */
+    text-align: center;
+    /* background-color: red; */
+    height: 100%;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+/* M */
+/* #map { */
+    /* margin: 0; */
+    /* padding: 0; */
+    /* background-color: blue; */
+    /* height: 100%; */
+    /* width: 100%; */
+/* } */
+
+/* N */
+.navbar {
+    position: relative;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    background-color: white;
+    box-shadow: 2px 2px #e2e2e2;
+    font-size: 12px;
+}
+
+/* O */
+/* P */
+/* Q */
+/* R */
+.right {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+/* S */
+
+/* T */
+.title {
+    height: auto;
+    /* background-color: lightgray; */
+}
+
+.title h1 {
+    margin: 16px 0 0 0;
+}
+
+/* U */
+/* V */
+/* W */
+/* X */
+/* Y */
+/* Z */
