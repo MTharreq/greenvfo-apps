@@ -8,7 +8,6 @@ const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 const searchLayer = L.geoJSON(herbariumLocation, {
   onEachFeature: function(feature, layer) {
     layer.bindPopup(feature.properties.Species);
-    // console.log(layer.bindPopup(feature.properties.Species))
   }
 }).addTo(map);
 
@@ -19,6 +18,13 @@ const searchControl = new L.Control.Search({
   propertyName: 'Species'
 });
 
-let herba = map.addControl(searchControl);
+map.addControl(searchControl);
 // console.log(herbariumLocation.features[3].properties.Species)
-// console.log(herba)
+// console.log(map)
+
+// Event listener to access matched features after search
+searchControl.on('search:locationfound', function(event) {
+  const matchedFeature = event.layer.feature;
+  const speciesHeading = document.getElementById('species-heading');
+  speciesHeading.textContent = matchedFeature.properties.Species;
+});
