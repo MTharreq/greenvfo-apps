@@ -23,7 +23,8 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/second.css">
 </head>
 <body>
 	<!-- NAVBAR -->
@@ -57,37 +58,131 @@
 			</div>
 		</div>
 	</section>
-
-	<div class="container">
+	
+	<section class="container">
+		
 		<!-- MAP -->
-		<div id="map" ></div>
+		<section class="map-container">
+			<div class="map" id="map" ></div>
+		</section>
+		
+		<!-- OVERLAY -->
+		<div class="overlay-box">
 
-		<!-- INFO -->
-		<div class="infobar">
-			<div class="title">
-				<h1 id="species-heading">Gymnacranthera Ocellata R.T.A Schouten</h1>
-				<p class="info-subtitle"><span>Tree</span> | Endemic to Borneo (Sabah, Sarawak, Brunei, and Kalimantan)
-			</div>
-			<!-- <div class="buttons">
-				<button id="desciption" class="btn-enable" type="button">Description</button>
-				<button id="ecology" class="btn-outlined" type="button">Ecology</button>
-				<button id="benefit" class="btn-outlined" type="button">Benefit</button>
-				<button id="collector" class="btn-outlined" type="button">Collector</button>
-			</div> -->
-			<hr class="solid">
-			<div class="info-box description">
-				<h3>Description</h3>
-				<p>In primary well-drained forest on low hills and ridges, usually in lowland Dipterocarp forest, but also from kerangas kerangas forest, on tuff, sandy and sandy loam soils, up to 1300 m altitude. Flowering mainly in June-November; fruiting in July-December</p>
-			</div>
-			<hr class="solid">
-			<div class="info-box benefit">
-				<h3>Benefit</h3>
-				<p>In primary well-drained forest on low hills and ridges, usually in lowland Dipterocarp forest, but also from kerangas kerangas forest, on tuff, sandy and sandy loam soils, up to 1300 m altitude. Flowering mainly in June-November; fruiting in July-December</p>
+			<!-- INFO -->
+			<div class="infobar">
+				<div class="scroll-container">
+					<div class="flora-image">
+						<img src="src\img\herbarium\Gymnacranthera Ocellata R.T.A Schouten.png" alt="">
+					</div>
+	
+					<div class="title">
+						<h1 id="species-heading">Gymnacranthera Ocellata R.T.A Schouten</h1>
+						<p class="info-subtitle"><span id="habitus">Tree</span> | <span id="distribution">Endemic to Borneo (Sabah, Sarawak, Brunei, and Kalimantan)</span></p>
+					</div>
+					
+					<div class="buttons">
+						<button id="desciption" class="btn-enable" type="button">Description</button>
+						<button id="ecology" class="btn-outlined" type="button">Ecology</button>
+						<button id="benefit" class="btn-outlined" type="button">Benefit</button>
+						<button id="collector" class="btn-outlined" type="button">Collector</button>
+					</div>
+					
+					<hr class="solid">
+					<div class="info-box description">
+						<h3>Description</h3>
+						<p id="description">In primary well-drained forest on low hills and ridges, usually in lowland Dipterocarp forest, but also from kerangas kerangas forest, on tuff, sandy and sandy loam soils, up to 1300 m altitude. Flowering mainly in June-November; fruiting in July-December</p>
+					</div>
+					<hr class="solid">
+					<div class="info-box benefit">
+						<h3>Benefit</h3>
+						<p id="benefit">-</p>
+					</div>
+		
+					<p class="info-last-update">Last update: 19 July 2023</p>
+				</div>
 			</div>
 
-			<!-- <p class="info-last-update">Last update: 19 July 2023</p> -->
+			<!-- ADD FORM -->
+			<div class="add-form">
+				<div class="title">
+					<h1>WebGIS Herbarium Form 🪴</h1>
+					<p>Submit your Herbarium Species for Kalimantan Flora Habitat Characteristic</p>
+				</div>
+				
+				<div id="scroll-container" class="scroll-container">
+					<div class="content">
+						<div class="add-image-container">
+							<h2>Add Image</h2>
+							<div class="box-container">
+								<div class="center-box">
+									<svg xmlns="http://www.w3.org/2000/svg" width="61" height="60" viewBox="0 0 61 60" fill="none">
+										<g clip-path="url(#clip0_163_121)">
+										<path d="M23 40H38V25H48L30.5 7.5L13 25H23V40ZM13 45H48V50H13V45Z" fill="#808080"/>
+										</g>
+										<defs>
+										<clipPath id="clip0_163_121">
+										<rect width="60" height="60" fill="white" transform="translate(0.5)"/>
+										</clipPath>
+										</defs>
+									</svg>
+									<div class="text">
+										<p>Drag and Drop here</p>
+										<p>or</p>
+										<p id="primary-color">Browse Image</p>
+									</div>
+								</div>
+							</div>
+							<p class="subtitle">Accepted File Types: .png and .jpeg only</p>
+						</div>
+				
+						<div class="required-form">
+							<p class="alert-text">Required to answer*</p>
+							<form class="list-form" action="">
+								<div class="form">
+									<label for="name">Name species flora</label>
+									<input type="text" id="name" name="name" placeholder="Name species flora" value="">
+								</div>
+								<div class="form">
+									<label for="latitude">Latitude</label>
+									<input type="text" id="latitude" name="latitude" placeholder="Latitude species flora" value="">
+								</div>
+								<div class="form">
+									<label for="longtitude">Longtitude</label>
+									<input type="text" id="longtitude" name="longtitude" placeholder="Longtitude species flora" value="">
+								</div>
+							</form> 
+						</div>
+						
+						<div class="optional-form">
+							<p class="alert-text">Optional</p>
+							<form class="list-form" action="">
+								<div class="form">
+									<label for="desc">Description</label>
+									<input type="text" id="desc" name="desc" placeholder="Description species flora" value="">
+								</div>
+								<div class="form">
+									<label for="ecology">Ecology</label>
+									<input type="text" id="ecology" name="ecology" placeholder="Ecology species flora" value="">
+								</div>
+								<div class="form">
+									<label for="habitus">Habitus</label>
+									<input type="text" id="habitus" name="habitus" placeholder="Habitus species flora" value="">
+								</div>
+								<div class="form">
+									<label for="benefit">Benefit</label>
+									<input type="text" id="benefit" name="benefit" placeholder="Benefit species flora" value="">
+								</div>
+							</form>
+						</div>
+						
+						<input class="button" type="submit" value="Add Herbarium">
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
+	</section>
+	
 	
 <!-- SCRIPT JS -->
 <script src="script.js"></script>

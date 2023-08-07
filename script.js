@@ -26,5 +26,15 @@ map.addControl(searchControl);
 searchControl.on('search:locationfound', function(event) {
   const matchedFeature = event.layer.feature;
   const speciesHeading = document.getElementById('species-heading');
+  const habitus = document.getElementById('habitus');
+  const distribution = document.getElementById('distribution');
+  const description = document.getElementById('description');
+  const benefit = document.getElementById('benefit');
+
+
   speciesHeading.textContent = matchedFeature.properties.Species;
+  habitus.textContent = matchedFeature.properties.Habitus;
+  distribution.textContent = matchedFeature.properties.Distribution;
+  description.textContent = matchedFeature.properties.Description;
+  benefit.textContent = matchedFeature.properties.Manfaat;
 });

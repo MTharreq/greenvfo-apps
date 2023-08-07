@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+$primary-color: #8EAC50 !default;
+$secondary-color: #808080;
+$black-color: #343538 !default;
+$subtitle-color: rgba(52, 53, 56, 0.50);
+$warning-color: #FF6C6C;
+
+$navbar-height: 70px;
+
+:root {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: lightgray;
+    
+    a, a:visited, a:active {
+        text-decoration: none;
+        color: $secondary-color;
+    }
+
+    h1 {
+        color: $black-color;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    h2 {
+        color: $black-color;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    p {
+        color: $black-color;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    #primary-color {
+        color: $primary-color;
+    }
+}
+
+.navbar {
+    position: sticky;
+    // top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    background-color: white;
+    height: $navbar-height;
+    z-index: 1;
+    .left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .logo {
+            font-size: 32px;
+            font-weight: bolder;
+        }
+    }
+
+    .right {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 32px;
+        width: 1000px;
+        height: inherit;
+
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            
+            .icon {
+                color: $subtitle-color;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                padding: 8px 16px;
+                gap: 8px;
+                border-radius: 500px;
+
+                p {
+                    color: $subtitle-color;
+                }
+
+            }
+
+            :hover {
+                background-color: #E8EEDC;
+                color: $primary-color;
+                p {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        .profile-picture {
+            display: flex;
+            height: inherit;
+            img {
+                margin: auto;
+                width: auto;
+                height: 70%;
+            }
+        }
+    }
+}
+
+
+.container {
+    .map-container {
+        #map {
+            margin: 0;
+            padding: 0;
+            z-index: 0;
+            width: 100%;
+            height: calc(100vh - $navbar-height);
+        }
+    }
+
+    .overlay-box {
+        position: absolute;
+        bottom: 0; 
+        right: 32px;
+
+        height: calc(100vh - $navbar-height);
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .infobar {
+            display: none;
+            // display: flex;
+
+            flex-direction: column;
+            background-color: white;
+            padding: 24px 16px 16px 16px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            width: 450px;
+            border-radius: 8px;
+            gap: 10px;
+            height: 90%;
+
+            .scroll-container {
+                overflow-y: scroll;
+                border-radius: 8px;
+
+                .flora-image img{
+                    width: 100%;
+                    border-radius: 8px;
+                }
+
+                .title {
+                    // height: 200px;
+                    background-color: lightcoral;
+                }
+
+                .buttons {
+                    background-color: lightgreen;
+                }
+
+                .info-box {
+                    background-color: lightblue;
+                }
+            }
+        }
+
+        .add-form {
+            // display: none;
+            display: flex;
+
+            flex-direction: column;
+            background-color: white;
+            padding: 24px 16px 16px 16px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            width: 450px;
+            border-radius: 8px;
+            gap: 10px;
+            height: 90%;
+
+            .title {
+                text-align: center;
+                display: flex;
+                // padding: 0px 16px;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                align-self: stretch;
+        
+                p {
+                    color: $subtitle-color;
+                }
+            }
+
+            .scroll-container{
+                overflow-y: scroll;
+
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 24px;
+                    padding-bottom: 24px;
+
+                    .add-image-container{
+                        background-color: white;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 0px 8px;
+                        gap: 8px;
+
+                        .box-container {
+                            height: fit-content;
+                            padding: 16px 0px;
+                            align-self: stretch;
+
+                            border-radius: 8px;
+                            border: 2px dashed rgba(0, 0, 0, 0.20);
+
+                            display: flex;
+                            justify-content: center;
+
+                            .center-box {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                gap: 8px;
+
+                                svg {
+                                    width: 60px;
+                                    height: auto;
+                                }
+
+                                .text p {
+                                    text-align: center;
+                                    color: $secondary-color;
+                                }
+                            }
+                        }
+
+                        .subtitle {
+                            color: #C2C2C3;
+                            font-size: 12px;
+                        }
+                    }
+
+                    .required-form {
+                        background-color: white;
+                        padding: 16px 16px;
+
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 8px;
+
+                        border-radius: 8px;
+                        box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+        
+                        .alert-text {
+                            color: $warning-color;
+                            font-size: 10px;
+                            font-style: italic;
+                        }
+        
+                        .list-form {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 16px;
+                            align-self: stretch;
+                            
+                            .form {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 8px;
+                                
+                                label {
+                                    color: $black-color;
+                                    font-size: 14px;
+                                    font-weight: 600;
+                                    line-height: normal;
+                                }
+
+                                input {
+                                    color: $black-color;
+                                    font-family: 'Plus Jakarta Sans';
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                    line-height: normal;
+                                    background-color: transparent;
+    
+                                    border-width: 0 0 1px 0;
+                                    border-color: #D9D9D9;
+                                }
+                            }
+                        }
+                    }
+
+                    .optional-form {
+                        background-color: white;
+                        padding: 16px 16px;
+
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 8px;
+
+                        border-radius: 8px;
+                        box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+        
+                        .alert-text {
+                            color: $secondary-color;
+                            font-size: 10px;
+                            font-style: italic;
+                        }
+        
+                        .list-form {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 16px;
+                            align-self: stretch;
+                            
+                            .form {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 8px;
+                                
+                                label {
+                                    color: $black-color;
+                                    font-size: 14px;
+                                    font-weight: 600;
+                                    line-height: normal;
+                                }
+
+                                input {
+                                    color: $black-color;
+                                    font-family: 'Plus Jakarta Sans';
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                    line-height: normal;
+                                    background-color: transparent;
+    
+                                    border-width: 0 0 1px 0;
+                                    border-color: #D9D9D9;
+                                }
+                            }
+                        }
+                    }
+
+                    .button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        align-self: stretch;
+                        padding: 10px 0 10px 0;
+                    
+                        border: none;
+                        border-radius: 8px;
+                        background: $primary-color;
+                        
+                        color: white;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
