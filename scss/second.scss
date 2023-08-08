@@ -48,6 +48,7 @@ $navbar-height: 70px;
     }
 }
 
+//NAVBAR
 .navbar {
     position: sticky;
     // top: 0;
@@ -58,6 +59,7 @@ $navbar-height: 70px;
     background-color: white;
     height: $navbar-height;
     z-index: 1;
+
     .left {
         display: flex;
         justify-content: center;
@@ -82,6 +84,7 @@ $navbar-height: 70px;
             gap: 10px;
             
             .icon {
+                background-color: transparent;
                 color: $subtitle-color;
                 display: flex;
                 align-items: center;
@@ -89,6 +92,8 @@ $navbar-height: 70px;
                 padding: 8px 16px;
                 gap: 8px;
                 border-radius: 500px;
+                border: none;
+                font-family: $primary-font;
 
                 p {
                     color: $subtitle-color;
@@ -142,7 +147,7 @@ $navbar-height: 70px;
 
         // INFOBAR
         .infobar {
-            display: flex;
+            display: none;
 
             flex-direction: column;
             background-color: white;
@@ -203,7 +208,26 @@ $navbar-height: 70px;
                     display: flex;
                     gap: 8px;
 
-                    .btn-enable {
+                    .btn {
+                        cursor: pointer;
+                        
+                        font-family: $primary-font;
+                        background-color: white;
+                        border-radius: 8px;
+                        border: 2px solid #8EAC50;
+                        color: $primary-color;
+                        padding: 10px 10px;
+                        text-align: center;
+                        font-size: 12px;
+                        font-weight: 600;
+                        
+                        &:hover:not(.active) {
+                            background-color: #E8EEDC;
+                            color: $primary-color;
+                        }
+                    }
+
+                    .active {
                         cursor: pointer;
 
                         font-family: $primary-font;
@@ -217,24 +241,13 @@ $navbar-height: 70px;
                         font-weight: 600;
 
                     }
-                    
-                    .btn-outlined {
-                        cursor: pointer;
-                        
-                        font-family: $primary-font;
-                        background-color: white;
-                        border-radius: 8px;
-                        border: 2px solid #8EAC50;
-                        color: $primary-color;
-                        padding: 10px 10px;
-                        text-align: center;
-                        font-size: 12px;
-                        font-weight: 600;
+                }
 
-                        &:hover {
-                            background-color: #E8EEDC;
-                            color: $primary-color;
-                        }
+                .info-box {
+                    padding-top: 8px;
+
+                    :not(.active) {
+                        display: none;
                     }
                 }
 

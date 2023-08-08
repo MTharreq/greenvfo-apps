@@ -64,6 +64,7 @@
   gap: 10px;
 }
 .navbar .right .icons .icon {
+  background-color: transparent;
   color: rgba(52, 53, 56, 0.5);
   display: flex;
   align-items: center;
@@ -71,6 +72,8 @@
   padding: 8px 16px;
   gap: 8px;
   border-radius: 500px;
+  border: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 .navbar .right .icons .icon p {
   color: rgba(52, 53, 56, 0.5);
@@ -109,7 +112,7 @@
   justify-content: center;
 }
 .container .overlay-box .infobar {
-  display: flex;
+  display: none;
   flex-direction: column;
   background-color: white;
   padding: 24px 16px 16px 16px;
@@ -156,19 +159,7 @@
   display: flex;
   gap: 8px;
 }
-.container .overlay-box .infobar .scroll-container .buttons .btn-enable {
-  cursor: pointer;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  background-color: #8EAC50;
-  border-radius: 8px;
-  border: 2px solid #8EAC50;
-  color: white;
-  padding: 10px 10px;
-  text-align: center;
-  font-size: 12px;
-  font-weight: 600;
-}
-.container .overlay-box .infobar .scroll-container .buttons .btn-outlined {
+.container .overlay-box .infobar .scroll-container .buttons .btn {
   cursor: pointer;
   font-family: "Plus Jakarta Sans", sans-serif;
   background-color: white;
@@ -180,9 +171,27 @@
   font-size: 12px;
   font-weight: 600;
 }
-.container .overlay-box .infobar .scroll-container .buttons .btn-outlined:hover {
+.container .overlay-box .infobar .scroll-container .buttons .btn:hover:not(.active) {
   background-color: #E8EEDC;
   color: #8EAC50;
+}
+.container .overlay-box .infobar .scroll-container .buttons .active {
+  cursor: pointer;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #8EAC50;
+  border-radius: 8px;
+  border: 2px solid #8EAC50;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+.container .overlay-box .infobar .scroll-container .info-box {
+  padding-top: 8px;
+}
+.container .overlay-box .infobar .scroll-container .info-box :not(.active) {
+  display: none;
 }
 .container .overlay-box .infobar .scroll-container .info-last-update {
   color: rgba(52, 53, 56, 0.5);

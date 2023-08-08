@@ -15,7 +15,7 @@
 	<!-- LEAFLET SEARCH -->
 	<script src="./src/leaflet-search/leaflet-search.src.js"></script>
 	<link rel="stylesheet" href="./src/leaflet-search/leaflet-search.src.css" />
-  
+
 	<!-- GEOJSON DATA -->
 	<script src="./src/data/herbariumLocation.js"></script>
 
@@ -37,20 +37,14 @@
 
 		<div class="right">
 			<nav class="icons">
-				<a href="" class="icon home">
+				<button type="button" id="home" class="icon home" onclick="navButton(this.id)">
 					<span class="material-symbols-outlined">home</span>
 					<p>Home</p>
-				</a>		
-				<a href="./pages/add/add.html" class="icon add">
+				</button>		
+				<button type="button" id="add" class="icon add" onclick="navButton(this.id)">
 					<span class="material-symbols-outlined">add_circle</span>
 					<p>Add Herbarium</p>
-				</a>
-
-				<!-- TEST BUTTON -->
-				<!-- <a href="./tes.html" class="icon add">
-					<span class="material-symbols-outlined">face</span>
-					<p>Test</p>
-				</a> -->
+				</button>
 			</nav>
 
 			<div class="profile-picture">
@@ -68,34 +62,15 @@
 		
 		<!-- OVERLAY -->
 		<div class="overlay-box">
-
 			<!-- INFO -->
 			<div class="infobar">
 				<div class="flora-nav">
 					<button type="button" class="nav-arrow left">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-							<g clip-path="url(#clip0_197_93)">
-							<path d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z" fill="black" fill-opacity="0.5"/>
-							</g>
-							<defs>
-							<clipPath id="clip0_197_93">
-							<rect width="24" height="24" fill="white"/>
-							</clipPath>
-							</defs>
-						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"> <g clip-path="url(#clip0_197_93)"> <path d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z" fill="black" fill-opacity="0.5"/> </g> <defs> <clipPath id="clip0_197_93"> <rect width="24" height="24" fill="white"/> </clipPath> </defs> </svg>
 					</button>
 					<p>Flora 58 of 119</p>
 					<button type="button" class="nav-arrow right">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-							<g clip-path="url(#clip0_197_97)">
-							  <path d="M8.58984 16.59L13.1698 12L8.58984 7.41L9.99984 6L15.9998 12L9.99984 18L8.58984 16.59Z" fill="black" fill-opacity="0.5"/>
-							</g>
-							<defs>
-							  <clipPath id="clip0_197_97">
-								<rect width="24" height="24" fill="white"/>
-							  </clipPath>
-							</defs>
-						  </svg>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"> <g clip-path="url(#clip0_197_97)"> <path d="M8.58984 16.59L13.1698 12L8.58984 7.41L9.99984 6L15.9998 12L9.99984 18L8.58984 16.59Z" fill="black" fill-opacity="0.5"/> </g> <defs> <clipPath id="clip0_197_97"> <rect width="24" height="24" fill="white"/> </clipPath> </defs> </svg>
 					</button>
 				</div>
 
@@ -103,29 +78,26 @@
 					<div class="flora-image">
 						<img src="src\img\herbarium\Gymnacranthera Ocellata R.T.A Schouten.png" alt="">
 					</div>
-	
+
 					<div class="title">
 						<h1 id="species-heading">Gymnacranthera Ocellata R.T.A Schouten</h1>
 						<p class="info-subtitle"><span id="habitus">Tree</span> | <span id="distribution">Endemic to Borneo (Sabah, Sarawak, Brunei, and Kalimantan)</span></p>
 					</div>
 					
-					<div class="buttons">
-						<button id="desciption" class="btn-enable" type="button">Description</button>
-						<button id="ecology" class="btn-outlined" type="button">Ecology</button>
-						<button id="benefit" class="btn-outlined" type="button">Benefit</button>
-						<button id="collector" class="btn-outlined" type="button">Collector</button>
+					<div id="infoButtons" class="buttons">
+						<button id="btn-description" class="btn active" type="button">Description</button>
+						<button id="btn-ecology" class="btn" type="button">Ecology</button>
+						<button id="btn-benefit" class="btn" type="button">Benefit</button>
+						<button id="btn-collector" class="btn" type="button">Collector</button>
 					</div>
 					
-					<div class="info-box description">
-						<!-- <h2>Description</h2> -->
-						<p id="description">In primary well-drained forest on low hills and ridges, usually in lowland Dipterocarp forest, but also from kerangas kerangas forest, on tuff, sandy and sandy loam soils, up to 1300 m altitude. Flowering mainly in June-November; fruiting in July-December</p>
+					<div id="infoBox" class="info-box">
+						<p id="description" class="info active">Deskripsi: Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aspernatur atque aperiam. Blanditiis doloremque quis dolorum dicta harum cum sequi, voluptas reiciendis repellendus, sint ea accusamus ex aperiam distinctio provident, amet eum soluta incidunt adipisci sunt expedita! Iste, nihil quis repellat amet fugiat, repudiandae recusandae nobis placeat dolores impedit quod!</p>
+						<hr><p id="ecology" class="info">Ecology: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam fugit quam esse sed magnam repellat fugiat eum at vel quos!</p>
+						<hr><p id="benefit" class="info">Benefit: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, ut dolor! Dolore voluptates delectus saepe!</p>
+						<hr><p id="collector" class="info">Collector: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis quam iure laboriosam, adipisci unde quae doloribus vero harum provident cupiditate!</p>
 					</div>
 
-					<!-- <div class="info-box benefit">
-						<h2>Benefit</h2>
-						<p id="benefit">-</p>
-					</div> -->
-		
 					<p class="info-last-update">Last update: 19 July 2023</p>
 				</div>
 			</div>
@@ -213,5 +185,38 @@
 	
 <!-- SCRIPT JS -->
 <script src="script.js"></script>
+
+<!-- DOM SCRIPT -->
+<script>
+	function navButton(id){
+		if(id=='home'){
+			document.querySelector('.infobar').style.display = 'flex'
+			document.querySelector('.add-form').style.display = 'none'
+		}else{
+			document.querySelector('.infobar').style.display = 'none'
+			document.querySelector('.add-form').style.display = 'flex'
+		}
+	}
+
+
+	const btnContainer = document.getElementById("infoButtons");
+	const btns = btnContainer.getElementsByClassName("btn");
+
+	const infoContainer = document.getElementById("infoBox")
+	const ps = infoContainer.getElementsByClassName('info')
+
+	// Loop through the buttons and add the active class to the current/clicked button
+	for (let i = 0; i < btns.length; i++) {
+		btns[i].addEventListener("click", () => {
+			let current = document.getElementsByClassName("active");
+			current[0].className = current[0].className.replace(" active", "");
+			btns[i].className += " active";
+			
+			let currentInfo = infoContainer.getElementsByClassName('active')
+			currentInfo[0].className = currentInfo[0].className.replace(" active", "");
+			ps[i].className += ' active'
+		});
+	}	
+</script>
 </body>
 </html>
