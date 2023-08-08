@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 $primary-color: #8EAC50 !default;
 $secondary-color: #808080;
@@ -6,10 +6,12 @@ $black-color: #343538 !default;
 $subtitle-color: rgba(52, 53, 56, 0.50);
 $warning-color: #FF6C6C;
 
+$primary-font: 'Plus Jakarta Sans', sans-serif;
+
 $navbar-height: 70px;
 
 :root {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: $primary-font;
     background-color: lightgray;
     
     a, a:visited, a:active {
@@ -138,9 +140,9 @@ $navbar-height: 70px;
         align-items: center;
         justify-content: center;
 
+        // INFOBAR
         .infobar {
-            display: none;
-            // display: flex;
+            display: flex;
 
             flex-direction: column;
             background-color: white;
@@ -148,12 +150,38 @@ $navbar-height: 70px;
             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
             width: 450px;
             border-radius: 8px;
-            gap: 10px;
+            gap: 16px;
             height: 90%;
+
+            .flora-nav {
+                display: flex;
+                justify-content: space-between;
+
+                .nav-arrow {
+                    cursor: pointer;
+                    border: none;
+                    background-color: transparent;
+                    border-radius: 8px;
+
+                    &:hover {
+                        background-color: rgba(0, 0, 0, 0.05);
+                    }
+                }
+
+                p {
+                    color: $secondary-color;
+                }
+            }
 
             .scroll-container {
                 overflow-y: scroll;
                 border-radius: 8px;
+
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                padding-bottom: 24px;
 
                 .flora-image img{
                     width: 100%;
@@ -162,22 +190,63 @@ $navbar-height: 70px;
 
                 .title {
                     // height: 200px;
-                    background-color: lightcoral;
+                    // background-color: lightcoral;
+                    p {
+                        margin-top: 4px;
+                        color: $secondary-color;
+                    }
                 }
 
                 .buttons {
-                    background-color: lightgreen;
+                    // background-color: lightgreen;
+                    padding-top: 8px;
+                    display: flex;
+                    gap: 8px;
+
+                    .btn-enable {
+                        cursor: pointer;
+
+                        font-family: $primary-font;
+                        background-color: $primary-color;
+                        border-radius: 8px;
+                        border: 2px solid #8EAC50;
+                        color: white;
+                        padding: 10px 10px;
+                        text-align: center;
+                        font-size: 12px;
+                        font-weight: 600;
+
+                    }
+                    
+                    .btn-outlined {
+                        cursor: pointer;
+                        
+                        font-family: $primary-font;
+                        background-color: white;
+                        border-radius: 8px;
+                        border: 2px solid #8EAC50;
+                        color: $primary-color;
+                        padding: 10px 10px;
+                        text-align: center;
+                        font-size: 12px;
+                        font-weight: 600;
+
+                        &:hover {
+                            background-color: #E8EEDC;
+                            color: $primary-color;
+                        }
+                    }
                 }
 
-                .info-box {
-                    background-color: lightblue;
+                .info-last-update {
+                    color: $subtitle-color;
                 }
             }
         }
 
+        // ADD FORM
         .add-form {
-            // display: none;
-            display: flex;
+            display: none;
 
             flex-direction: column;
             background-color: white;
