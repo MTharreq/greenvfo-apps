@@ -1,386 +1,359 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
-html,
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+:root {
   font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: lightgray;
 }
-
-/* A */
-a,
-a:visited,
-a:active {
+:root a, :root a:visited, :root a:active {
   text-decoration: none;
   color: #808080;
 }
-
-.add-form .title {
-  text-align: center;
-  display: flex;
-  padding: 0px 16px;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  align-self: stretch;
+:root h1 {
   color: #343538;
-}
-.add-form .title h2 {
   font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
-.add-form .title p {
-  color: rgba(52, 53, 56, 0.5);
-  font-size: 14px;
-}
-.add-form .scroll-container {
-  padding: 16px 8px 0px 8px;
-  flex: 1 0 0;
-  align-self: stretch;
-}
-.add-form .scroll-container .content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-}
-.add-form .scroll-container .content .add-image {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px 8px;
-  gap: 8px;
-  align-self: stretch;
-}
-.add-form .scroll-container .content .add-image h3 {
+:root h2 {
   color: #343538;
   font-size: 14px;
-}
-.add-form .scroll-container .content .add-image .box-and-subtitle {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  align-self: stretch;
-}
-.add-form .scroll-container .content .add-image .box-and-subtitle .box-container {
-  display: flex;
-  padding: 64px 136px 64px 135px;
-  justify-content: center;
-  align-items: center;
-  align-self: stretch;
-  border-radius: 8px;
-  border: 2px dashed rgba(0, 0, 0, 0.2);
-}
-.add-form .scroll-container .content .add-image .box-and-subtitle .box-container .center-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-}
-.add-form .scroll-container .content .add-image .box-and-subtitle .box-container .center-box svg {
-  width: 60px;
-  height: 60px;
-}
-.add-form .scroll-container .content .add-image .box-and-subtitle .box-container .center-box .text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.add-form .scroll-container .content .add-image .box-and-subtitle .box-container .center-box .text p {
-  color: #808080;
-  font-size: 14px;
+  font-style: normal;
   font-weight: 700;
-}
-.add-form .scroll-container .content .add-image .box-and-subtitle .subtitle {
-  align-self: stretch;
-  color: var(--black-placeholder, #C2C2C3);
-  font-family: Plus Jakarta Sans;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
   line-height: normal;
 }
-.add-form .scroll-container .content .required-form {
-  display: flex;
-  padding: 16px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  align-self: stretch;
-  border-radius: 8px;
-  background: var(--white, #FFF);
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
-}
-.add-form .scroll-container .content .required-form .alert-text {
-  color: var(--red, #FF6C6C);
-  font-family: Plus Jakarta Sans;
-  font-size: 10px;
-  font-style: italic;
-  font-weight: 500;
-  line-height: normal;
-}
-.add-form .scroll-container .content .required-form .list-form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-  align-self: stretch;
-}
-.add-form .scroll-container .content .required-form .list-form .form label {
-  color: var(--black, #343538);
-  font-family: Plus Jakarta Sans;
+:root p {
+  color: #343538;
   font-size: 14px;
   font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-.add-form .scroll-container .content .required-form .list-form .form input {
-  color: var(--black-placeholder, #C2C2C3);
-  font-family: Plus Jakarta Sans;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  background-color: transparent;
-  border: 0px solid;
-}
-.add-form .scroll-container .content .optional-form {
-  display: flex;
-  padding: 16px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  align-self: stretch;
-  border-radius: 8px;
-  background: var(--white, #FFF);
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
-}
-.add-form .scroll-container .content .optional-form .alert-text {
-  color: var(--secondary, #808080);
-  font-family: Plus Jakarta Sans;
-  font-size: 10px;
-  font-style: italic;
   font-weight: 500;
   line-height: normal;
 }
-.add-form .scroll-container .content .optional-form .list-form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-  align-self: stretch;
-}
-.add-form .scroll-container .content .optional-form .list-form .form label {
-  color: var(--black, #343538);
-  font-family: Plus Jakarta Sans;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-.add-form .scroll-container .content .optional-form .list-form .form input {
-  color: var(--black-placeholder, #C2C2C3);
-  font-family: Plus Jakarta Sans;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  background-color: transparent;
-  border: 0px solid;
-}
-.add-form .scroll-container .content .button {
-  display: flex;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  align-self: stretch;
-  border: none;
-  border-radius: 8px;
-  background: #8EAC50;
-  color: white;
-  font-family: Plus Jakarta Sans;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+:root #primary-color {
+  color: #8EAC50;
 }
 
-/* B */
-.btn-enable {
+.navbar {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24px;
+  background-color: white;
+  height: 64px;
+  z-index: 1;
+}
+.navbar .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .left .logo {
+  font-size: 32px;
+  font-weight: bolder;
+}
+.navbar .right {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 32px;
+  width: 1000px;
+  height: inherit;
+}
+.navbar .right .icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.navbar .right .icons .icon {
+  background-color: transparent;
+  color: rgba(52, 53, 56, 0.5);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px 16px;
+  gap: 8px;
+  border-radius: 500px;
+  border: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.navbar .right .icons .icon p {
+  color: rgba(52, 53, 56, 0.5);
+}
+.navbar .right .icons :hover {
+  background-color: #E8EEDC;
+  color: #8EAC50;
+}
+.navbar .right .icons :hover p {
+  color: #8EAC50;
+}
+.navbar .right .profile-picture {
+  display: flex;
+  height: inherit;
+}
+.navbar .right .profile-picture img {
+  margin: auto;
+  width: auto;
+  height: 70%;
+}
+
+.container .map-container #map {
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+  width: 100%;
+  height: calc(100vh - 64px);
+}
+.container .overlay-box {
+  position: absolute;
+  bottom: 0;
+  right: 32px;
+  height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .overlay-box .infobar {
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  padding: 24px 16px 16px 16px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  max-width: 450px;
+  border-radius: 8px;
+  gap: 16px;
+  height: 90%;
+}
+.container .overlay-box .infobar .flora-nav {
+  display: flex;
+  justify-content: space-between;
+}
+.container .overlay-box .infobar .flora-nav .nav-arrow {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  border-radius: 8px;
+}
+.container .overlay-box .infobar .flora-nav .nav-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.container .overlay-box .infobar .flora-nav p {
+  color: #808080;
+}
+.container .overlay-box .infobar .scroll-container {
+  overflow-y: scroll;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 24px;
+}
+.container .overlay-box .infobar .scroll-container .flora-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+.container .overlay-box .infobar .scroll-container .title p {
+  margin-top: 4px;
+  color: #808080;
+}
+.container .overlay-box .infobar .scroll-container .buttons {
+  padding-top: 8px;
+  display: flex;
+  gap: 8px;
+}
+.container .overlay-box .infobar .scroll-container .buttons .btn {
+  cursor: pointer;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: white;
+  border-radius: 8px;
+  border: 2px solid #8EAC50;
+  color: #8EAC50;
+  padding: 10px 10px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+.container .overlay-box .infobar .scroll-container .buttons .btn:hover:not(.active) {
+  background-color: #E8EEDC;
+  color: #8EAC50;
+}
+.container .overlay-box .infobar .scroll-container .buttons .active {
+  cursor: pointer;
+  font-family: "Plus Jakarta Sans", sans-serif;
   background-color: #8EAC50;
   border-radius: 8px;
   border: 2px solid #8EAC50;
   color: white;
   padding: 10px 10px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
 }
-
-.btn-outlined {
+.container .overlay-box .infobar .scroll-container .info-box {
+  padding-top: 8px;
+}
+.container .overlay-box .infobar .scroll-container .info-box :not(.active) {
+  display: none;
+}
+.container .overlay-box .infobar .scroll-container .info-last-update {
+  color: rgba(52, 53, 56, 0.5);
+}
+.container .overlay-box .add-form {
+  display: none;
+  flex-direction: column;
   background-color: white;
-  border-radius: 8px;
-  border: 2px solid #8EAC50;
-  color: #8EAC50;
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 500;
-}
-
-/* C */
-.container {
-  width: 100%;
-  /* height: 100%; */
-  background-color: blue;
-  padding: 0;
-  margin: 70px 0 0 0;
-  display: flex;
-}
-
-/* E */
-/* F */
-/* G */
-/* H */
-h1, h2, h3, p {
-  margin: 0;
-}
-
-/* I */
-.infobar {
-  background-color: white;
-  padding: 0 24px;
-  box-shadow: 2px 0px #e2e2e2;
-  width: 35%;
-  height: fit-content;
-  /* overflow: auto; */
-}
-
-.info-box h3 {
-  margin: 16px 0 0 0;
-}
-
-.info-subtitle {
-  color: #4D4D4D;
-}
-
-.info-last-update {
-  color: #808080;
-}
-
-/* J */
-/* K */
-/* L */
-.leaflet-container {
-  width: 100%;
-}
-
-/* M */
-#map {
-  margin: 0;
-  padding: 0;
-  z-index: 0;
-}
-
-/* N */
-.navbar {
-  position: fixed;
-  padding: 0 24px;
-  display: flex;
-  align-self: stretch;
-  justify-content: space-between;
-  height: 70px;
-  background-color: white;
-  box-shadow: 2px 2px #e2e2e2;
-  font-size: 12px;
-  z-index: 100;
-}
-.navbar .left .logo {
-  padding-top: 10px;
-  /* width: 500px; */
-  text-align: center;
-  /* background-color: red; */
-  height: 100%;
-  align-items: center;
-  font-size: 32px;
-  font-weight: bolder;
-}
-.navbar .right {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-.navbar .right .icons {
-  display: flex;
-  align-items: center;
-  background-color: white;
-  /* text-align: center; */
-  justify-content: center;
-  /* height: 100%; */
-  gap: 1px;
-}
-.navbar .right .icons .icon {
-  height: 100%;
-  /* background-color: yellow; */
-  display: flex;
-  align-items: center;
-  color: #808080;
-  cursor: pointer;
-  padding: 16px;
-  gap: 4px;
-}
-.navbar .right .icons :hover {
-  border-radius: 8px;
-  background-color: #E8EEDC;
-  color: #8EAC50;
-  padding: 0 16px;
-}
-
-/* O */
-.overlay-box {
-  /* box-shadow: 0px 5px 5px rgb(0 0 0 / 0.2);
-  border-radius: 8px;
-  padding:  24px 16px 8px 16px;
-  right: 20px;
-  align-self: center;
-  width: 25%;
-  height: max-content;
-  background-color: white;
-  position: absolute;
-  color: black; */
-  /* display: none; */
-  z-index: 999;
-  display: flex;
+  padding: 24px 16px 16px 16px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   width: 450px;
-  height: max-content;
-  min-width: 450px;
-  padding: 24px 8px 8px 8px;
+  border-radius: 8px;
+  gap: 10px;
+  height: 90%;
+}
+.container .overlay-box .add-form .title {
+  text-align: center;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  position: absolute;
-  right: 32px;
-  bottom: 32px;
-  border-radius: 8px;
-  background: white;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  gap: 8px;
+  align-self: stretch;
 }
-
-/* P */
-/* Q */
-/* R */
-/* S */
-/* T */
-/* U */
-/* V */
-/* W */
-/* X */
-/* Y */
-/* Z *//*# sourceMappingURL=main.css.map */
+.container .overlay-box .add-form .title p {
+  color: rgba(52, 53, 56, 0.5);
+}
+.container .overlay-box .add-form .scroll-container {
+  overflow-y: scroll;
+}
+.container .overlay-box .add-form .scroll-container .content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 24px;
+}
+.container .overlay-box .add-form .scroll-container .content .add-image-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 8px;
+  gap: 8px;
+}
+.container .overlay-box .add-form .scroll-container .content .add-image-container .box-container {
+  height: fit-content;
+  padding: 16px 0px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 2px dashed rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+}
+.container .overlay-box .add-form .scroll-container .content .add-image-container .box-container .center-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.container .overlay-box .add-form .scroll-container .content .add-image-container .box-container .center-box svg {
+  width: 60px;
+  height: auto;
+}
+.container .overlay-box .add-form .scroll-container .content .add-image-container .box-container .center-box .text p {
+  text-align: center;
+  color: #808080;
+}
+.container .overlay-box .add-form .scroll-container .content .add-image-container .subtitle {
+  color: #C2C2C3;
+  font-size: 12px;
+}
+.container .overlay-box .add-form .scroll-container .content .required-form {
+  background-color: white;
+  padding: 16px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+}
+.container .overlay-box .add-form .scroll-container .content .required-form .alert-text {
+  color: #FF6C6C;
+  font-size: 10px;
+  font-style: italic;
+}
+.container .overlay-box .add-form .scroll-container .content .required-form .list-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-self: stretch;
+}
+.container .overlay-box .add-form .scroll-container .content .required-form .list-form .form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.container .overlay-box .add-form .scroll-container .content .required-form .list-form .form label {
+  color: #343538;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+}
+.container .overlay-box .add-form .scroll-container .content .required-form .list-form .form input {
+  color: #343538;
+  font-family: "Plus Jakarta Sans";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
+  background-color: transparent;
+  border-width: 0 0 1px 0;
+  border-color: #D9D9D9;
+}
+.container .overlay-box .add-form .scroll-container .content .optional-form {
+  background-color: white;
+  padding: 16px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+}
+.container .overlay-box .add-form .scroll-container .content .optional-form .alert-text {
+  color: #808080;
+  font-size: 10px;
+  font-style: italic;
+}
+.container .overlay-box .add-form .scroll-container .content .optional-form .list-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-self: stretch;
+}
+.container .overlay-box .add-form .scroll-container .content .optional-form .list-form .form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.container .overlay-box .add-form .scroll-container .content .optional-form .list-form .form label {
+  color: #343538;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+}
+.container .overlay-box .add-form .scroll-container .content .optional-form .list-form .form input {
+  color: #343538;
+  font-family: "Plus Jakarta Sans";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
+  background-color: transparent;
+  border-width: 0 0 1px 0;
+  border-color: #D9D9D9;
+}
+.container .overlay-box .add-form .scroll-container .content .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  padding: 10px 0 10px 0;
+  border: none;
+  border-radius: 8px;
+  background: #8EAC50;
+  color: white;
+  font-weight: bold;
+}/*# sourceMappingURL=main.css.map */
