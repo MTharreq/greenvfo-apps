@@ -1,3 +1,5 @@
+import mongoose from "mongoose";
+
 function getInfoDOM(event){
 	const matchedFeature = event.layer.feature;
 
