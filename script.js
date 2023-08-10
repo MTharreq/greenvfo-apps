@@ -13,8 +13,11 @@ function getInfoDOM(event){
 	const collector = document.getElementById('collector');
 
 	//SHOW INFOBAR
-	document.querySelector('.infobar').style.display = 'flex'
-	document.querySelector('.add-form').style.display = 'none'
+	document.querySelector('.add-form').classList.remove("flex")
+	document.querySelector('.infobar').classList.add("flex")
+	document.querySelector('.add').classList.remove("active")
+	document.querySelector('.flora').classList.add("active")
+
 
 	//CHANGE PROPERTIES
 	images.src = matchedFeature.properties.Image
@@ -51,10 +54,10 @@ const marker = L.geoJSON(herbariumLocation,
 		}
 	}).addTo(map)
 	.addEventListener('click', function(event) {
-		document.querySelector('.infobar').style.display = 'flex'
-		document.querySelector('.add-form').style.display = 'none'
-
-		// const matchedFeature = event.layer.feature;
+		document.querySelector('.add-form').classList.remove("flex")
+		document.querySelector('.infobar').classList.add("flex")
+		document.querySelector('.add').classList.remove("active")
+		document.querySelector('.flora').classList.add("active")
 
 		getInfoDOM(event)
 

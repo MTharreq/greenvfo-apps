@@ -36,12 +36,12 @@
 		</div>
 
 		<div class="right">
-			<nav class="icons">
-				<button type="button" id="home" class="icon home" onclick="navButton(this.id)">
-					<span class="material-symbols-outlined">home</span>
-					<p>Home</p>
+			<nav id="icons" class="icons">
+				<button type="button" id="flora" class="icon flora">
+					<span class="material-symbols-outlined"> eco </span>
+					<p>Flora</p>
 				</button>		
-				<button type="button" id="add" class="icon add" onclick="navButton(this.id)">
+				<button type="button" id="add" class="icon add">
 					<span class="material-symbols-outlined">add_circle</span>
 					<p>Add Herbarium</p>
 				</button>
@@ -63,7 +63,7 @@
 		<!-- OVERLAY -->
 		<div class="overlay-box">
 			<!-- INFO -->
-			<div class="infobar">
+			<div class="card infobar flex">
 				<div class="flora-nav">
 					<button type="button" class="nav-arrow left">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"> <g clip-path="url(#clip0_197_93)"> <path d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z" fill="black" fill-opacity="0.5"/> </g> <defs> <clipPath id="clip0_197_93"> <rect width="24" height="24" fill="white"/> </clipPath> </defs> </svg>
@@ -76,13 +76,13 @@
 
 				<div class="scroll-container">
 					<div class="flora-image">
-						<img id="images" src="src\img\herbarium\Gymnacranthera Ocellata R.T.A Schouten.png" alt="">
+						<img id="images" src="" alt="">
 						<!-- <img src="https://herbarium-wanariset.or.id/uploads/images/Cornaceae-Alangium%20ridleyi-AA3723%20(Large).jpg" alt=""> -->
 					</div>
 
 					<div class="title">
-						<h1 id="species-heading">Gymnacranthera Ocellata R.T.A Schouten</h1>
-						<p class="info-subtitle"><span id="habitus">Tree</span> | <span id="distribution">Endemic to Borneo (Sabah, Sarawak, Brunei, and Kalimantan)</span></p>
+						<h1 id="species-heading">No Species Selected</h1>
+						<p class="info-subtitle"><span id="habitus">No Habitus Selected</span> | <span id="distribution">No Distribution Selected</span></p>
 					</div>
 					
 					<div id="infoButtons" class="buttons">
@@ -93,10 +93,10 @@
 					</div>
 					
 					<div id="infoBox" class="info-box">
-						<p id="description" class="info active">Deskripsi: Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aspernatur atque aperiam. Blanditiis doloremque quis dolorum dicta harum cum sequi, voluptas reiciendis repellendus, sint ea accusamus ex aperiam distinctio provident, amet eum soluta incidunt adipisci sunt expedita! Iste, nihil quis repellat amet fugiat, repudiandae recusandae nobis placeat dolores impedit quod!</p>
-						<hr><p id="ecology" class="info">Ecology: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam fugit quam esse sed magnam repellat fugiat eum at vel quos!</p>
-						<hr><p id="benefit" class="info">Benefit: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, ut dolor! Dolore voluptates delectus saepe!</p>
-						<hr><p id="collector" class="info">Collector: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis quam iure laboriosam, adipisci unde quae doloribus vero harum provident cupiditate!</p>
+						<p id="description" class="info active">No Description</p>
+						<hr><p id="ecology" class="info">No Ecology</p>
+						<hr><p id="benefit" class="info">No Benefit</p>
+						<hr><p id="collector" class="info">No Collector</p>
 					</div>
 
 					<p class="info-last-update">Last update: 19 July 2023</p>
@@ -104,10 +104,10 @@
 			</div>
 
 			<!-- ADD FORM -->
-			<div class="add-form">
+			<div class="card add-form">
 				<div class="title">
 					<h1>WebGIS Flora Form 🪴</h1>
-					<p>Submit your Herbarium Species for Kalimantan Flora Habitat Characteristic</p>
+					<p>Submit your Flora or Herbarium Species for Kalimantan Flora Habitat Characteristic</p>
 				</div>
 				
 				<div id="scroll-container" class="scroll-container">
@@ -189,14 +189,28 @@
 
 <!-- DOM SCRIPT -->
 <script>
-	function navButton(id){
-		if(id=='home'){
-			document.querySelector('.infobar').style.display = 'flex'
-			document.querySelector('.add-form').style.display = 'none'
-		}else{
-			document.querySelector('.infobar').style.display = 'none'
-			document.querySelector('.add-form').style.display = 'flex'
-		}
+	// function navButton(id){
+	const iconContainer = document.getElementById("icons");
+	const icons = iconContainer.getElementsByClassName('icon')
+	const cards = document.getElementsByClassName('card')
+
+
+	// Loop through the buttons and add the active class to the current/clicked button
+	for (let i = 0; i < icons.length; i++) {
+		icons[i].addEventListener("click", () => {
+			let current = iconContainer.getElementsByClassName("active");
+			let currentInfo = document.getElementsByClassName('flex')
+
+			// If there's no active class
+			if (current.length > 0) {
+				// console.log(current.length)
+				current[0].className = current[0].className.replace(" active", "");
+				currentInfo[0].className = currentInfo[0].className.replace(" flex", "");
+			}
+
+			icons[i].className += " active";
+			cards[i].className += ' flex'
+		});
 	}
 
 
@@ -209,7 +223,7 @@
 	// Loop through the buttons and add the active class to the current/clicked button
 	for (let i = 0; i < btns.length; i++) {
 		btns[i].addEventListener("click", () => {
-			let current = document.getElementsByClassName("active");
+			let current = btnContainer.getElementsByClassName("active");
 			current[0].className = current[0].className.replace(" active", "");
 			btns[i].className += " active";
 			
